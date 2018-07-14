@@ -1,0 +1,80 @@
+body{
+background-color: #1A154C;
+}
+#first-p{
+    color: white;
+    font-size: 33px;
+    position: absolute;
+width: 342px;
+height: 594px;
+left: 20px;
+top: 220px;
+display: inline-block;
+}
+
+#box1{
+background-color: white;
+display: inline-block;
+position: absolute;
+width: 1220px;
+height: 730px;
+left: 380px;
+top: 291px;
+}
+
+img{
+   height: 150px; 
+}
+
+#second-p{
+    position: absolute;
+width: 919px;
+height: 80px;
+left: 370px;
+top: 171px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 64px;
+}
+
+#button1{
+    position: absolute;
+width: 387px;
+height: 144px;
+left: 204px;
+top: 340px;
+border-radius: 50px;
+background-color: #1A154C;
+color:white;
+border: 10px solid rgb(62, 150, 209);
+font-size: 30px;
+}
+
+#button2{
+    position: absolute;
+width: 387px;
+height: 144px;
+left: 650px;
+top: 337px;
+border-radius: 50px;
+color: white;
+background-color: #1A154C;
+border: 10px solid rgb(62, 150, 209);
+font-size: 30px;
+}
+
+#button1:hover{
+    background-color:white;
+color: #1A154C;
+border: 10px solid #1A154C;
+transition-duration: 0.4s;
+}
+
+#button2:hover{
+    background-color:white;
+color: #1A154C;
+border: 10px solid #1A154C;
+transition-duration: 0.4s;
+}
