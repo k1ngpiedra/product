@@ -8,6 +8,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        zoom: 96%;
       }
       table {
         font-size: 12px;
@@ -20,16 +21,17 @@
         display: inline-block;
     }
       #listing {
-        position: absolute;
+        
         width: 200px;
         height: 470px;
         overflow: auto;
-        left: 442px;
+        left: 600px;
         top: 0px;
         cursor: pointer;
         overflow-x: hidden;
+
       }
-      #findhotels {
+      #findparks {
         position: absolute;
         text-align: right;
         width: 100px;
@@ -39,15 +41,14 @@
         background-color: #fff;
       }
       #locationField {
-        position: absolute;
-        width: 190px;
-        height: 25px;
-        left: 108px;
-        top: 0px;
-        z-index: 5;
         background-color: #fff;
-      
-    }
+        position: absolute;
+        width: 248px;
+        height: 66px;
+        left: 412px;
+        top: 250px;
+        border-radius: 35px;
+      }
       #controls {
         position: absolute;
         left: 300px;
@@ -55,12 +56,29 @@
         top: 0px;
         z-index: 5;
         background-color: #fff;
+        left: 820px;
+        top: 250px;
+        width: 323px;
+        border-radius: 35px;
       }
       #autocomplete {
         width: 100%;
+        height: 66px;
+        top: 250px;
+        font-size: 30px;
+        border: 3px solid #FBAE3B;
+        border-radius: 35px; 
       }
       #country {
-        width: 100%;
+        width: 323px;
+        height: 74px;
+        left: 639px;
+        top: 250px;
+        font-size: 30px;
+        background: #FFFFFF;
+        border: 3px solid #FBAE3B;
+        text-align: center;
+        border-radius: 35px;
       }
       .placeIcon {
         width: 20px;
@@ -74,6 +92,8 @@
       #resultsTable {
         border-collapse: collapse;
         width: 240px;
+        text-align: left;
+        left: 500px;
       }
       #rating {
         font-size: 13px;
@@ -84,14 +104,32 @@
       }
       .iw_attribute_name {
         font-weight: bold;
-        text-align: right;
+        text-align: left;
       }
       .iw_table_icon {
-        text-align: right;
+        text-align: left;
       }
 
       #first-area{
-          background-color: #1A154C;
+        background-color: #1A154C;
         color: white;
-          height: 379px;
-        }
+        height: 379px;
+        width: 1600px;
+        text-align: center;  
+      }
+      #openingHoursContent{
+      left: 50px;
+      }
+
+      #description{
+        font-size: 36px;
+        font-family: roboto;
+      }
+
+      #iw-address{
+        text-align: left;
+      }
+
+      #iw-phone{
+        text-align: left;
+      }

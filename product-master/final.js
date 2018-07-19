@@ -61,7 +61,7 @@
         },
         'us': {
           center: {lat: 37.1, lng: -95.7},
-          zoom: 3
+          zoom: 4
         },
         'uk': {
           center: {lat: 54.8, lng: -4.6},
@@ -220,7 +220,14 @@
                 return;
               }
               infoWindow.open(map, marker);
+              
               buildIWContent(place);
+              console.log(place);
+              openingHours = place.opening_hours;
+              console.log(openingHours);
+              var date = new Date();
+              var weekDay = date.getDay();
+              document.getElementById("openingHoursContent").innerHTML = openingHours.weekday_text[weekDay];
             });
       }
 
