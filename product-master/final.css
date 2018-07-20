@@ -43,11 +43,12 @@
       #locationField {
         background-color: #fff;
         position: absolute;
-        width: 248px;
+        width: 40%;
         height: 66px;
-        left: 412px;
         top: 250px;
         border-radius: 35px;
+        text-align: center;
+        margin-left: 30%;
       }
       #controls {
         position: absolute;
@@ -65,7 +66,8 @@
         width: 100%;
         height: 66px;
         top: 250px;
-        font-size: 30px;
+        font-size: 24px;
+        padding-left: 20px;
         border: 3px solid #FBAE3B;
         border-radius: 35px; 
       }
@@ -115,7 +117,8 @@
         color: white;
         height: 379px;
         width: 1600px;
-        text-align: center;  
+        text-align: center; 
+      
       }
       #openingHoursContent{
       left: 50px;
@@ -133,3 +136,24 @@
       #iw-phone{
         text-align: left;
       }
+
+      /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#moonlight{
+  display: none;
+  z-index: 10;
+}
+

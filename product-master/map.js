@@ -15,12 +15,58 @@
       var hostnameRegexp = new RegExp('^https?://.+?/');
 
       var countries = {
-
-        'us': {
-          center: {lat: 37.1, lng: -95.7},
+        'au': {
+          center: {lat: -25.3, lng: 133.8},
           zoom: 4
         },
-        
+        'br': {
+          center: {lat: -14.2, lng: -51.9},
+          zoom: 3
+        },
+        'ca': {
+          center: {lat: 62, lng: -110.0},
+          zoom: 3
+        },
+        'fr': {
+          center: {lat: 46.2, lng: 2.2},
+          zoom: 5
+        },
+        'de': {
+          center: {lat: 51.2, lng: 10.4},
+          zoom: 5
+        },
+        'mx': {
+          center: {lat: 23.6, lng: -102.5},
+          zoom: 4
+        },
+        'nz': {
+          center: {lat: -40.9, lng: 174.9},
+          zoom: 5
+        },
+        'it': {
+          center: {lat: 41.9, lng: 12.6},
+          zoom: 5
+        },
+        'za': {
+          center: {lat: -30.6, lng: 22.9},
+          zoom: 5
+        },
+        'es': {
+          center: {lat: 40.5, lng: -3.7},
+          zoom: 5
+        },
+        'pt': {
+          center: {lat: 39.4, lng: -8.2},
+          zoom: 6
+        },
+        'us': {
+          center: {lat: 37.1, lng: -95.7},
+          zoom: 3
+        },
+        'uk': {
+          center: {lat: 54.8, lng: -4.6},
+          zoom: 5
+        }
       };
 
       function initMap() {
@@ -82,8 +128,7 @@
             // assign a letter of the alphabetic to each marker icon.
             for (var i = 0; i < results.length; i++) {
               var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
-              var markerIcon = './marker.png';
-              markers: new google.maps.Size(50, 50), // scaled size
+              var markerIcon = MARKER_PATH + markerLetter + '.png';
               // Use marker animation to drop the icons incrementally on the map.
               markers[i] = new google.maps.Marker({
                 position: results[i].geometry.location,
@@ -168,7 +213,6 @@
       // Get the place details for a hotel. Show the information in an info window,
       // anchored on the marker for the hotel that the user selected.
       function showInfoWindow() {
-        document.getElementById("moonlight").style.display = "block";
         var marker = this;
         places.getDetails({placeId: marker.placeResult.place_id},
             function(place, status) {
@@ -177,12 +221,6 @@
               }
               infoWindow.open(map, marker);
               buildIWContent(place);
-              console.log(place.address_components);
-              openingHours = place.opening_hours;
-              console.log(openingHours);
-              var date = new Date();
-              var weekDay = date.getDay();
-              document.getElementById("openingHoursContent").innerHTML = openingHours.weekday_text[weekDay - 1];
             });
       }
 
@@ -235,58 +273,3 @@
           document.getElementById('iw-website-row').style.display = 'none';
         }
       }
-      // Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-
-
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-

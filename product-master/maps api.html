@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Field Time</title>
+    <title>Place Autocomplete Hotel Search</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./final.css">
-    <link rel="shortcut icon" href="./logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="map.css">
   </head>
 
   <body>
-<div id="first-area"> 
-    
-      <img class="fadeInDownBig animated" id="logo" src="logo.png"/>
-  <p  class="fadeInDownBig animated"id="description">Finding fields and getting a time schedule so<br> 
-    you can play a match of soccer.</p>
 
-    <div id="moonlight">
-       
+    <div id="findhotels">
+      Find Fields in:
     </div>
 
-  
-
-    <div  class="fadeInDownBig animated" id="locationField">
-      <input id="autocomplete" placeholder="Enter a City" type="text" />
+    <div id="locationField">
+      <input id="autocomplete" placeholder="Enter a city" type="text" />
     </div>
 
-    
-</div>
+    <div id="controls">
+      <select id="country">
+        <option value="all">All</option>
+        <option value="au">Australia</option>
+        <option value="br">Brazil</option>
+        <option value="ca">Canada</option>
+        <option value="fr">France</option>
+        <option value="de">Germany</option>
+        <option value="mx">Mexico</option>
+        <option value="nz">New Zealand</option>
+        <option value="it">Italy</option>
+        <option value="za">South Africa</option>
+        <option value="es">Spain</option>
+        <option value="pt">Portugal</option>
+        <option value="us" selected>U.S.A.</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+    </div>
+
     <div id="map"></div>
 
     <div id="listing">
@@ -37,7 +44,7 @@
       </table>
     </div>
 
-    <div style="display: none;">
+    <div style="display: none">
       <div id="info-content">
         <table>
           <tr id="iw-url-row" class="iw_table_row">
@@ -60,21 +67,11 @@
             <td class="iw_attribute_name">Website:</td>
             <td id="iw-website"></td>
           </tr>
-          <tr class="iw_table_row" class="iw_table_row">
-            <td id="openingHoursContent" class="iw_attribute_name"></td>
-            <td id="iw-website"></td>
-          </tr>
         </table>
       </div>
     </div>
 
-
-
-      
-
-
-
-<script src="./final.js"></script>
+<script src="map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZQiCA49eNG-IvOMBgz3Gk8L_xGWn-1zw&libraries=places&callback=initMap"
         async defer></script>
   </body> 
